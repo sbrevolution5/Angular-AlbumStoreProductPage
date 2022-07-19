@@ -1,3 +1,4 @@
+import { Product } from './../product';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Album} from '../album';
@@ -7,7 +8,7 @@ import { Album} from '../album';
   styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-  albumInfo:Album;
+  albumInfo:Product;
   constructor(private _productService:ProductService) { }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
+import { Product } from './product';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -10,7 +11,7 @@ export class ProductService {
   constructor(private _http:Http) {
     
   }
-  getAlbum(id:number):Observable<Album> {
-    return this._http.get(this._albumUrl).map((response) => <Album>response.json());
+  getAlbum(id:number):Observable<Product> {
+    return this._http.get(this._albumUrl).map((response) => <Product>response.json());
   }
 }
